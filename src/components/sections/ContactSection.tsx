@@ -24,7 +24,11 @@ export default function ContactSection() {
           </motion.h2>
 
           {/* Form */}
-          <form className="space-y-6 bg-white dark:bg-gray-700 p-8 rounded-2xl shadow-xl">
+          <form
+            action="https://formspree.io/f/YOUR_FORM_ID"
+            method="POST"
+            className="space-y-6 bg-white dark:bg-gray-700 p-8 rounded-2xl shadow-xl"
+          >
             <div>
               <label className="block text-gray-700 dark:text-gray-300 mb-3 font-medium">
                 Name
