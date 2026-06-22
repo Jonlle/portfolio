@@ -25,21 +25,24 @@ This site is a single-page portfolio with dedicated sections for:
 
 | Area       | Tool                   |
 | ---------- | ---------------------- |
-| UI         | React 18               |
-| Build tool | Vite 6                 |
-| Language   | TypeScript 5           |
+| UI         | React 19               |
+| Build tool | Vite 8                 |
+| Language   | TypeScript 6           |
 | Styling    | Tailwind CSS v4        |
 | Animations | Framer Motion          |
 | Icons      | react-icons, Heroicons |
-| Linting    | ESLint 9               |
+| Linting    | ESLint 10              |
+| Formatter  | Prettier               |
 
 ## Available scripts
 
 ```bash
-npm run dev      # Start the development server
-npm run build    # Type-check and build for production
-npm run lint     # Run ESLint
-npm run preview  # Preview the production build locally
+npm run dev          # Start the development server
+npm run build        # Type-check and build for production
+npm run lint         # Run ESLint
+npm run format       # Format all files with Prettier
+npm run format:check # Check formatting without writing
+npm run preview      # Preview the production build locally
 ```
 
 ## Project structure
