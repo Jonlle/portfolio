@@ -12,7 +12,9 @@ export const MobileMenuToggle = ({
   <button
     onClick={toggleMenu}
     className="md:hidden p-2 rounded-lg hover:bg-accent transition-colors"
-    aria-label="Toggle menu"
+    aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+    aria-expanded={isMenuOpen}
+    aria-controls="mobile-menu"
   >
     {isMenuOpen ? (
       <XMarkIcon className="w-6 h-6 text-heading" />

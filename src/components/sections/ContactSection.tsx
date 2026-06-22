@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
 import { FiSend } from "react-icons/fi";
 
-export const ContactSection = () => {
+export default function ContactSection() {
   return (
-    <section id="contact" className="py-20 bg-gray-50 dark:bg-gray-800">
+    <section id="contact" aria-label="Contact" className="py-20 bg-gray-50 dark:bg-gray-800">
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

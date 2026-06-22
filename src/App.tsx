@@ -1,22 +1,22 @@
+import { lazy, Suspense } from "react";
 import { Header, MainContainer, Footer } from "./components/layout";
-import {
-  AboutSkillsSection,
-  ContactSection,
-  HeroSection,
-  ProjectsSection,
-} from "./components/sections";
+
+const HeroSection = lazy(() => import("./components/sections/HeroSection"));
+const AboutSkillsSection = lazy(() => import("./components/sections/AboutSkillsSection"));
+const ProjectsSection = lazy(() => import("./components/sections/ProjectsSection"));
+const ContactSection = lazy(() => import("./components/sections/ContactSection"));
 
 function App() {
   return (
     <div className="flex flex-col min-h-screen">
       <Header />
       <MainContainer>
-        {/* <h1 className="text-4xl font-bold text-heading">Mi Portfolio</h1>
-        <p className="text-xl mt-6">Full Stack Developer | React Specialist</p> */}
-        <HeroSection />
-        <AboutSkillsSection />
-        <ProjectsSection />
-        <ContactSection />
+        <Suspense fallback={<div className="min-h-screen animate-pulse bg-gray-100 dark:bg-gray-800" />}>
+          <HeroSection />
+          <AboutSkillsSection />
+          <ProjectsSection />
+          <ContactSection />
+        </Suspense>
       </MainContainer>
       <Footer />
     </div>

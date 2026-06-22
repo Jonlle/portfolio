@@ -1,42 +1,10 @@
 import { motion } from "framer-motion";
 import { FiGithub, FiExternalLink } from "react-icons/fi";
+import { projects } from "../../data/projects";
 
-export const ProjectsSection = () => {
-  const projects = [
-    {
-      title: "Task Management System",
-      description:
-        "Full-featured web application for task management with role-based access control",
-      tech: ["Next.js", "TailwindCSS", "Zustand", "Flowbite", "TypeScript"],
-      image:
-        "https://github.com/Jonlle/task-management-system/blob/main/screenshots/dashboard.jpeg",
-      demo: "https://tms-tool.vercel.app",
-      github: "https://github.com/Jonlle/task-management-system",
-    },
-    {
-      title: "Google Maps Measurement Tool",
-      description:
-        "Professional-grade mapping tool for precise distance and area calculations",
-      tech: ["React", "TypeScript", "Google Maps API", "Vite"],
-      image:
-        "https://github.com/Jonlle/google-maps-measure-tools/blob/main/screenshots/radius_measurement.png",
-      demo: "https://measuremap.vercel.app/",
-      github: "https://github.com/Jonlle/google-maps-measure-tools",
-    },
-    {
-      title: "Pokémon Favorites App",
-      description:
-        "Modern Pokémon collection platform with SSR implementation and SEO optimization",
-      tech: ["Next.js", "React", "TypeScript", "TailwindCSS"],
-      image:
-        "https://github.com/Jonlle/next-pokemon-static/blob/main/screenshots/pokemon_details.png",
-      demo: "https://next-pokemon-static.vercel.app",
-      github: "https://github.com/Jonlle/next-pokemon-static",
-    },
-  ];
-
+export default function ProjectsSection() {
   return (
-    <section id="projects" className="py-20 bg-gray-50 dark:bg-gray-800">
+    <section id="projects" aria-label="Projects" className="py-20 bg-gray-50 dark:bg-gray-800">
       <div className="container mx-auto px-6">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}

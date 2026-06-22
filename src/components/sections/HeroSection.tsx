@@ -1,9 +1,10 @@
 import { motion } from "framer-motion";
 
-export const HeroSection = () => {
+export default function HeroSection() {
   return (
     <motion.section
       id="home"
+      aria-label="Introduction"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}

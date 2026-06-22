@@ -12,6 +12,7 @@ export const MainContainer = ({
 }: MainContainerProps) => {
   return (
     <motion.main
+      id="main-content"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       className={`flex-1 text-body transition-colors duration-300 pt-16 md:pt-20 ${className}`}
