@@ -60,4 +60,4 @@ export default function HeroSection() {
       </div>
     </motion.section>
   );
-};
+}

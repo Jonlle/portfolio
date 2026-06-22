@@ -17,7 +17,7 @@ export const MobileMenu = ({ isOpen, closeMenu }: MobileMenuProps) => {
 
     // Store reference to the toggle button before focus moves
     toggleRef.current = document.querySelector(
-      '[aria-controls="mobile-menu"]'
+      '[aria-controls="mobile-menu"]',
     ) as HTMLButtonElement | null;
 
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -30,7 +30,7 @@ export const MobileMenu = ({ isOpen, closeMenu }: MobileMenuProps) => {
       if (e.key !== "Tab" || !menuRef.current) return;
 
       const focusable = menuRef.current.querySelectorAll<HTMLElement>(
-        'a[href], button, input, textarea, [tabindex]:not([tabindex="-1"])'
+        'a[href], button, input, textarea, [tabindex]:not([tabindex="-1"])',
       );
       if (focusable.length === 0) return;
 
@@ -54,9 +54,8 @@ export const MobileMenu = ({ isOpen, closeMenu }: MobileMenuProps) => {
 
     // Focus first nav link when menu opens
     requestAnimationFrame(() => {
-      const firstLink = menuRef.current?.querySelector<HTMLAnchorElement>(
-        "a[href]"
-      );
+      const firstLink =
+        menuRef.current?.querySelector<HTMLAnchorElement>("a[href]");
       firstLink?.focus();
     });
 

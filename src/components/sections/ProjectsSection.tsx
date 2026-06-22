@@ -4,7 +4,11 @@ import { projects } from "../../data/projects";
 
 export default function ProjectsSection() {
   return (
-    <section id="projects" aria-label="Projects" className="py-20 bg-gray-50 dark:bg-gray-800">
+    <section
+      id="projects"
+      aria-label="Projects"
+      className="py-20 bg-gray-50 dark:bg-gray-800"
+    >
       <div className="container mx-auto px-6">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -93,4 +97,4 @@ export default function ProjectsSection() {
       </div>
     </section>
   );
-};
+}

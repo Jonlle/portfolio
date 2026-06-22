@@ -3,7 +3,11 @@ import { skills } from "../../data/skills";
 
 export const SkillsSection = () => {
   return (
-    <section id="skills" aria-label="Skills" className="bg-gray-50 dark:bg-gray-800 py-20">
+    <section
+      id="skills"
+      aria-label="Skills"
+      className="bg-gray-50 dark:bg-gray-800 py-20"
+    >
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0 }}
