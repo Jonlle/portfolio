@@ -4,20 +4,22 @@ Personal portfolio website for Jhonatan Llerena.
 
 ## Tech Stack
 
-- **Framework**: React 18.3 (Vite 6, TypeScript 5.6)
+- **Framework**: React 19 (Vite 8, TypeScript 6)
 - **Styling**: Tailwind CSS v4
 - **Animations**: Framer Motion
 - **Icons**: react-icons + @heroicons/react
-- **Linting**: ESLint 9
-- **Formatter**: Prettier (not configured — use ESLint)
+- **Linting**: ESLint 10
+- **Formatter**: Prettier
 
 ## Commands
 
 ```bash
-npm run dev      # Start dev server (port 5173)
-npm run build    # TypeScript compile + Vite build
-npm run lint     # Run ESLint
-npm run preview  # Preview production build
+npm run dev          # Start dev server (port 5173)
+npm run build        # TypeScript compile + Vite build
+npm run lint         # Run ESLint
+npm run format       # Format all files with Prettier
+npm run format:check # Check formatting without writing
+npm run preview      # Preview production build
 ```
 
 ## Project Structure
@@ -55,6 +57,8 @@ src/
 ## Notes
 
 - No test runner configured — if adding tests, prefer Vitest + React Testing Library
-- No formatter configured — follow ESLint rules
+- Prettier configured with `eslint-config-prettier` to avoid conflicts
 - Tailwind CSS v4 uses `@tailwindcss/vite` plugin (not PostCSS)
+- Contact form uses Formspree (`@formspree/react`)
+- Reduced-motion support via `MotionConfig reducedMotion="user"`
 - Social links and navigation are in `src/config/site.ts`
