@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { FiSend } from "react-icons/fi";
 import { useForm, ValidationError } from "@formspree/react";
+import { Footer } from "../layout/Footer";
 
 export default function ContactSection() {
   const [state, handleSubmit] = useForm("mvzjopjn");
@@ -10,7 +11,7 @@ export default function ContactSection() {
       <section
         id="contact"
         aria-label="Contact"
-        className="py-20 bg-gray-50 dark:bg-gray-800"
+        className="snap-section h-full flex items-center justify-center bg-gray-50 dark:bg-gray-800"
       >
         <div className="container mx-auto px-6">
           <motion.div
@@ -19,7 +20,7 @@ export default function ContactSection() {
             className="max-w-2xl mx-auto text-center"
           >
             <h2 className="text-5xl font-bold mb-8 dark:text-white">
-              Message Sent! ✅
+              Message Sent!
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">
               Thanks for reaching out. I&apos;ll get back to you soon.
@@ -40,7 +41,7 @@ export default function ContactSection() {
     <section
       id="contact"
       aria-label="Contact"
-      className="py-20 bg-gray-50 dark:bg-gray-800"
+      className="snap-section h-full flex flex-col items-center justify-center bg-gray-50 dark:bg-gray-800"
     >
       <div className="container mx-auto px-6">
         <motion.div
@@ -54,7 +55,7 @@ export default function ContactSection() {
             whileInView={{ scale: 1 }}
             className="text-5xl font-bold text-center mb-8 dark:text-white"
           >
-            Let&apos;s Connect 💬
+            Let&apos;s Connect
           </motion.h2>
 
           {/* Form */}
@@ -138,6 +139,8 @@ export default function ContactSection() {
           </form>
         </motion.div>
       </div>
+
+      <Footer />
     </section>
   );
 }

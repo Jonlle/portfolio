@@ -14,7 +14,7 @@ export const projects: Project[] = [
       "Full-featured web application for task management with role-based access control",
     tech: ["Next.js", "TailwindCSS", "Zustand", "Flowbite", "TypeScript"],
     image:
-      "https://github.com/Jonlle/task-management-system/blob/main/screenshots/dashboard.jpeg",
+      "https://raw.githubusercontent.com/Jonlle/task-management-system/main/screenshots/dashboard.jpeg",
     demo: "https://tms-tool.vercel.app",
     github: "https://github.com/Jonlle/task-management-system",
   },
@@ -24,7 +24,7 @@ export const projects: Project[] = [
       "Professional-grade mapping tool for precise distance and area calculations",
     tech: ["React", "TypeScript", "Google Maps API", "Vite"],
     image:
-      "https://github.com/Jonlle/google-maps-measure-tools/blob/main/screenshots/radius_measurement.png",
+      "https://raw.githubusercontent.com/Jonlle/google-maps-measure-tools/main/screenshots/radius_measurement.png",
     demo: "https://measuremap.vercel.app/",
     github: "https://github.com/Jonlle/google-maps-measure-tools",
   },
@@ -34,7 +34,7 @@ export const projects: Project[] = [
       "Modern Pokémon collection platform with SSR implementation and SEO optimization",
     tech: ["Next.js", "React", "TypeScript", "TailwindCSS"],
     image:
-      "https://github.com/Jonlle/next-pokemon-static/blob/main/screenshots/pokemon_details.png",
+      "https://raw.githubusercontent.com/Jonlle/next-pokemon-static/main/screenshots/pokemon_details.png",
     demo: "https://next-pokemon-static.vercel.app",
     github: "https://github.com/Jonlle/next-pokemon-static",
   },

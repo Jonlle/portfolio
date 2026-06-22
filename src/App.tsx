@@ -1,11 +1,9 @@
 import { lazy, Suspense } from "react";
 import { MotionConfig } from "framer-motion";
-import { Header, MainContainer, Footer } from "./components/layout";
+import { Header, MainContainer } from "./components/layout";
 
 const HeroSection = lazy(() => import("./components/sections/HeroSection"));
-const AboutSkillsSection = lazy(
-  () => import("./components/sections/AboutSkillsSection"),
-);
+const AboutSection = lazy(() => import("./components/sections/AboutSection"));
 const ProjectsSection = lazy(
   () => import("./components/sections/ProjectsSection"),
 );
@@ -16,21 +14,20 @@ const ContactSection = lazy(
 function App() {
   return (
     <MotionConfig reducedMotion="user">
-      <div className="flex flex-col min-h-screen">
+      <div className="h-screen flex flex-col">
         <Header />
         <MainContainer>
           <Suspense
             fallback={
-              <div className="min-h-screen animate-pulse bg-gray-100 dark:bg-gray-800" />
+              <div className="h-full animate-pulse bg-gray-100 dark:bg-gray-800" />
             }
           >
             <HeroSection />
-            <AboutSkillsSection />
+            <AboutSection />
             <ProjectsSection />
             <ContactSection />
           </Suspense>
         </MainContainer>
-        <Footer />
       </div>
     </MotionConfig>
   );
