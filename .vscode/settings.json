@@ -1,0 +1,15 @@
+{
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "files.associations": {
+    "*.gga": "shellscript"
+  },
+  "cSpell.words": [
+    "opencode",
+    "ollama",
+    "lmstudio",
+    "codellama",
+    "qwen",
+    "deepseek"
+  ]
+}
