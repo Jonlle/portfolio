@@ -8,7 +8,7 @@ export default function HeroSection() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
-      className="min-h-screen flex items-center justify-center pt-20"
+      className="snap-section h-full flex items-center justify-center"
     >
       <div className="container mx-auto px-6 text-center">
         <div className="flex flex-col md:flex-row items-center justify-between gap-12">

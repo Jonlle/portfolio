@@ -3,12 +3,36 @@
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 
 @layer base {
-  body {
-    @apply h-full bg-white dark:bg-gray-900 transition-colors duration-300;
+  html,
+  body,
+  #root {
+    @apply h-full overflow-hidden bg-white dark:bg-gray-900 transition-colors duration-300;
   }
 }
 
 @layer components {
+  .snap-container {
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem; /* Fixed header height offset */
+  }
+
+  @media (min-width: 768px) {
+    .snap-container {
+      scroll-snap-type: y mandatory;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .snap-container {
+      scroll-snap-type: y proximity;
+    }
+  }
+
+  .snap-section {
+    scroll-snap-align: start;
+  }
+
   .text-heading {
     @apply text-gray-900 dark:text-white;
   }

@@ -15,11 +15,9 @@ export const MainContainer = ({
       id="main-content"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      className={`flex-1 text-body transition-colors duration-300 pt-16 md:pt-20 ${className}`}
+      className={`flex-1 min-h-0 text-body transition-colors duration-300 snap-container ${className}`}
     >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
-        {children}
-      </div>
+      {children}
     </motion.main>
   );
 };
