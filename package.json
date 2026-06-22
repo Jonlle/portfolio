@@ -16,24 +16,24 @@
     "@heroicons/react": "^2.2.0",
     "@tailwindcss/vite": "^4.3.1",
     "framer-motion": "^12.40.0",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
     "react-icons": "^5.6.0",
     "tailwindcss": "^4.3.1"
   },
   "devDependencies": {
-    "@eslint/js": "^9.17.0",
+    "@eslint/js": "^10.0.1",
     "@types/react": "^19.2.17",
     "@types/react-dom": "^19.2.3",
-    "@vitejs/plugin-react": "^4.3.4",
-    "eslint": "^9.17.0",
+    "@vitejs/plugin-react": "^6.0.2",
+    "eslint": "^10.5.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-react-hooks": "^7.1.1",
     "eslint-plugin-react-refresh": "^0.5.3",
     "globals": "^17.6.0",
     "prettier": "^3.8.4",
-    "typescript": "~5.6.2",
+    "typescript": "^6.0.3",
     "typescript-eslint": "^8.61.1",
-    "vite": "^6.0.5"
+    "vite": "^8.0.16"
   }
 }
