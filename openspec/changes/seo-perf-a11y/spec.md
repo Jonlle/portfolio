@@ -10,12 +10,16 @@
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Jhonatan Llerena — Full Stack Developer</title>
-  <meta name="description" content="Personal portfolio of Jhonatan Llerena, Full Stack Developer specializing in React, TypeScript, and modern web technologies." />
+  <meta
+    name="description"
+    content="Personal portfolio of Jhonatan Llerena, Full Stack Developer specializing in React, TypeScript, and modern web technologies."
+  />
   <meta name="author" content="Jhonatan Llerena" />
 </head>
 ```
 
 **Acceptance criteria:**
+
 - [ ] Title contains name and role
 - [ ] Description is under 160 characters
 - [ ] Author meta tag present
@@ -25,12 +29,16 @@
 ```html
 <meta property="og:type" content="website" />
 <meta property="og:title" content="Jhonatan Llerena — Full Stack Developer" />
-<meta property="og:description" content="Personal portfolio of Jhonatan Llerena, Full Stack Developer specializing in React, TypeScript, and modern web technologies." />
+<meta
+  property="og:description"
+  content="Personal portfolio of Jhonatan Llerena, Full Stack Developer specializing in React, TypeScript, and modern web technologies."
+/>
 <meta property="og:url" content="https://jhonatanllerena.com" />
 <meta property="og:site_name" content="Jhonatan Llerena Portfolio" />
 ```
 
 **Acceptance criteria:**
+
 - [ ] All OG tags present
 - [ ] og:type is "website"
 - [ ] og:url matches deployment URL (placeholder ok for now)
@@ -40,10 +48,14 @@
 ```html
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="Jhonatan Llerena — Full Stack Developer" />
-<meta name="twitter:description" content="Personal portfolio of Jhonatan Llerena, Full Stack Developer specializing in React, TypeScript, and modern web technologies." />
+<meta
+  name="twitter:description"
+  content="Personal portfolio of Jhonatan Llerena, Full Stack Developer specializing in React, TypeScript, and modern web technologies."
+/>
 ```
 
 **Acceptance criteria:**
+
 - [ ] twitter:card is "summary" (no image yet)
 - [ ] Title and description match OG tags
 
@@ -51,21 +63,22 @@
 
 ```html
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Jhonatan Llerena",
-  "jobTitle": "Full Stack Developer",
-  "url": "https://jhonatanllerena.com",
-  "sameAs": [
-    "https://github.com/Jonlle",
-    "https://linkedin.com/in/jhonatanllerena"
-  ]
-}
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Jhonatan Llerena",
+    "jobTitle": "Full Stack Developer",
+    "url": "https://jhonatanllerena.com",
+    "sameAs": [
+      "https://github.com/Jonlle",
+      "https://linkedin.com/in/jhonatanllerena"
+    ]
+  }
 </script>
 ```
 
 **Acceptance criteria:**
+
 - [ ] Valid JSON-LD syntax
 - [ ] @type is "Person"
 - [ ] sameAs links match social links in config/site.ts
@@ -80,6 +93,7 @@ Sitemap: https://jhonatanllerena.com/sitemap.xml
 ```
 
 **Acceptance criteria:**
+
 - [ ] File exists in public/
 - [ ] Allows all crawlers
 - [ ] Sitemap reference present (sitemap itself is out of scope)
@@ -96,19 +110,30 @@ Replace eager imports with React.lazy():
 import { lazy, Suspense } from "react";
 
 const HeroSection = lazy(() => import("./components/sections/HeroSection"));
-const AboutSkillsSection = lazy(() => import("./components/sections/AboutSkillsSection"));
-const ProjectsSection = lazy(() => import("./components/sections/ProjectsSection"));
-const ContactSection = lazy(() => import("./components/sections/ContactSection"));
+const AboutSkillsSection = lazy(
+  () => import("./components/sections/AboutSkillsSection"),
+);
+const ProjectsSection = lazy(
+  () => import("./components/sections/ProjectsSection"),
+);
+const ContactSection = lazy(
+  () => import("./components/sections/ContactSection"),
+);
 ```
 
 **Acceptance criteria:**
+
 - [ ] All 4 sections use dynamic import()
 - [ ] No eager imports of section components remain
 
 ### 2.2 Suspense Boundary (App.tsx)
 
 ```tsx
-<Suspense fallback={<div className="min-h-screen animate-pulse bg-gray-100 dark:bg-gray-800" />}>
+<Suspense
+  fallback={
+    <div className="min-h-screen animate-pulse bg-gray-100 dark:bg-gray-800" />
+  }
+>
   <HeroSection />
   <AboutSkillsSection />
   <ProjectsSection />
@@ -117,6 +142,7 @@ const ContactSection = lazy(() => import("./components/sections/ContactSection")
 ```
 
 **Acceptance criteria:**
+
 - [ ] Suspense wraps all lazy sections
 - [ ] Fallback is visually minimal (pulse animation)
 - [ ] No layout shift when sections load
@@ -130,6 +156,7 @@ export default function HeroSection() { ... }
 ```
 
 **Acceptance criteria:**
+
 - [ ] All 4 section files use `export default`
 - [ ] Named exports removed or converted
 
@@ -153,6 +180,7 @@ Add a visually hidden link before the nav:
 Add `id="main-content"` to MainContainer or the main content wrapper.
 
 **Acceptance criteria:**
+
 - [ ] Skip link exists in DOM
 - [ ] Visually hidden until focused
 - [ ] Focus styling is visible
@@ -165,6 +193,7 @@ Add `id="main-content"` to MainContainer or the main content wrapper.
 ```
 
 **Acceptance criteria:**
+
 - [ ] `<nav>` has aria-label="Main navigation"
 
 ### 3.3 Mobile Menu Toggle ARIA (MobileMenuToggle.tsx)
@@ -180,6 +209,7 @@ Add `id="main-content"` to MainContainer or the main content wrapper.
 ```
 
 **Acceptance criteria:**
+
 - [ ] aria-label changes based on state
 - [ ] aria-expanded matches isMenuOpen
 - [ ] aria-controls points to mobile menu id
@@ -197,6 +227,7 @@ Add `id="main-content"` to MainContainer or the main content wrapper.
 ```
 
 **Acceptance criteria:**
+
 - [ ] id="mobile-menu" matches aria-controls on toggle
 - [ ] role="dialog" present
 - [ ] aria-modal="true" present
@@ -205,12 +236,14 @@ Add `id="main-content"` to MainContainer or the main content wrapper.
 ### 3.5 Focus Trap (MobileMenu.tsx)
 
 When menu opens:
+
 1. Focus first nav link
 2. Trap Tab/Shift+Tab within menu
 3. Close on Escape key
 4. Return focus to toggle button on close
 
 **Acceptance criteria:**
+
 - [ ] Tab does not escape menu when open
 - [ ] Escape key closes menu
 - [ ] Focus returns to toggle button on close
@@ -228,5 +261,6 @@ Each section gets an aria-label matching its purpose:
 ```
 
 **Acceptance criteria:**
+
 - [ ] All sections have aria-label
 - [ ] Section IDs match navigation hrefs

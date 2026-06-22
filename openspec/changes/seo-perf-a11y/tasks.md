@@ -1,6 +1,7 @@
 # Tasks: SEO, Performance & Accessibility
 
 ## Task 1: SEO Meta Tags
+
 **File:** `index.html`
 **Priority:** High
 
@@ -12,12 +13,14 @@
 - [x] Add schema.org JSON-LD script
 
 ## Task 2: robots.txt
+
 **File:** `public/robots.txt` (new)
 **Priority:** Medium
 
 - [x] Create robots.txt with User-agent, Allow, and Sitemap reference
 
 ## Task 3: Lazy Loading
+
 **File:** `src/App.tsx`
 **Priority:** High
 
@@ -27,6 +30,7 @@
 - [x] Verify sections render correctly
 
 ## Task 4: Section Export Pattern
+
 **Files:** `src/components/sections/*.tsx`
 **Priority:** High
 
@@ -37,6 +41,7 @@
 - [x] Update section index.ts barrel file
 
 ## Task 5: Skip-to-Content Link
+
 **Files:** `src/components/layout/Header.tsx`, `src/components/layout/MainContainer.tsx`
 **Priority:** High
 
@@ -45,12 +50,14 @@
 - [x] Style skip link (sr-only + focus styles)
 
 ## Task 6: Nav ARIA
+
 **File:** `src/components/layout/Header.tsx`
 **Priority:** High
 
 - [x] Add aria-label="Main navigation" to nav element
 
 ## Task 7: Mobile Menu Toggle ARIA
+
 **File:** `src/components/ui/MobileMenuToggle.tsx`
 **Priority:** High
 
@@ -59,6 +66,7 @@
 - [x] Update aria-label to reflect state
 
 ## Task 8: Mobile Menu ARIA + Focus Trap
+
 **File:** `src/components/ui/MobileMenu.tsx`
 **Priority:** High
 
@@ -71,6 +79,7 @@
 - [x] Return focus to toggle on close
 
 ## Task 9: Section ARIA Labels
+
 **Files:** `src/components/sections/*.tsx`
 **Priority:** Medium
 

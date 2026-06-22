@@ -23,15 +23,15 @@ This site is a single-page portfolio with dedicated sections for:
 
 ## Tech stack
 
-| Area | Tool |
-| --- | --- |
-| UI | React 18 |
-| Build tool | Vite 6 |
-| Language | TypeScript 5 |
-| Styling | Tailwind CSS v4 |
-| Animations | Framer Motion |
-| Icons | react-icons, Heroicons |
-| Linting | ESLint 9 |
+| Area       | Tool                   |
+| ---------- | ---------------------- |
+| UI         | React 18               |
+| Build tool | Vite 6                 |
+| Language   | TypeScript 5           |
+| Styling    | Tailwind CSS v4        |
+| Animations | Framer Motion          |
+| Icons      | react-icons, Heroicons |
+| Linting    | ESLint 9               |
 
 ## Available scripts
 
