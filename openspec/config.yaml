@@ -1,0 +1,53 @@
+# OpenSpec Configuration
+project: portfolio
+context: |
+  A personal portfolio web application built with React, TypeScript, Vite, and Tailwind CSS v4.
+  Includes layout components, sections (Hero, About, Skills, Projects, Contact), and global theme support.
+
+strict_tdd: false
+
+testing:
+  strict_tdd: false
+  detected: 2026-06-18
+  test_runner:
+    command: ""
+    framework: "none"
+  test_layers:
+    unit:
+      available: false
+      tool: ""
+    integration:
+      available: false
+      tool: ""
+    e2e:
+      available: false
+      tool: ""
+  coverage:
+    available: false
+    command: ""
+  quality_tools:
+    linter:
+      available: true
+      command: "npm run lint"
+    type_checker:
+      available: true
+      command: "npm run build"
+    formatter:
+      available: false
+      command: ""
+
+phases:
+  proposal:
+    artifact_path: "openspec/changes/{change}/proposal.md"
+  spec:
+    artifact_path: "openspec/changes/{change}/spec.md"
+  design:
+    artifact_path: "openspec/changes/{change}/design.md"
+  tasks:
+    artifact_path: "openspec/changes/{change}/tasks.md"
+  apply:
+    artifact_path: "openspec/changes/{change}/apply-progress.md"
+  verify:
+    artifact_path: "openspec/changes/{change}/verify-report.md"
+  archive:
+    artifact_path: "openspec/changes/archive/{change}-archive-report.md"

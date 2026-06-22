@@ -12,6 +12,9 @@ dist
 dist-ssr
 *.local
 
+# Gentle AI generated cache
+.atl/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

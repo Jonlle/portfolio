@@ -1,4 +1,3 @@
-// src/config/site.ts
 export const NAVIGATION = [
   { name: "About", href: "#about" },
   { name: "Skills", href: "#skills" },

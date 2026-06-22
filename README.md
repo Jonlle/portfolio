@@ -1,50 +1,79 @@
-# React + TypeScript + Vite
+# Jhonatan Llerena Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Personal portfolio website for Jhonatan Llerena, built to present professional profile, skills, projects, and contact links in a clean, responsive web experience.
 
-Currently, two official plugins are available:
+## Quick start
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```bash
+npm install
+npm run dev
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+The development server runs with Vite. Open the local URL printed in the terminal, usually `http://localhost:5173`.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## About the project
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+This site is a single-page portfolio with dedicated sections for:
+
+- Hero / introduction
+- About and skills
+- Projects
+- Contact and social links
+- Light/dark theme support
+
+## Tech stack
+
+| Area | Tool |
+| --- | --- |
+| UI | React 18 |
+| Build tool | Vite 6 |
+| Language | TypeScript 5 |
+| Styling | Tailwind CSS v4 |
+| Animations | Framer Motion |
+| Icons | react-icons, Heroicons |
+| Linting | ESLint 9 |
+
+## Available scripts
+
+```bash
+npm run dev      # Start the development server
+npm run build    # Type-check and build for production
+npm run lint     # Run ESLint
+npm run preview  # Preview the production build locally
 ```
+
+## Project structure
+
+```text
+src/
+├── components/
+│   ├── layout/       # Header, Footer, MainContainer
+│   ├── sections/     # Page sections: Hero, About, Skills, Projects, Contact
+│   └── ui/           # Reusable UI components
+├── config/           # Navigation, social links, and site constants
+├── context/          # Theme context and hooks
+├── data/             # Static data used by sections
+├── App.tsx           # Root app composition
+└── main.tsx          # React entry point
+```
+
+## Configuration
+
+Main site metadata lives in `src/config/site.ts`:
+
+- Navigation links
+- Social links
+- Display name
+
+Skill data lives in `src/data/skills.ts`.
+
+## Quality checks
+
+Before shipping changes, run:
+
+```bash
+npm run lint
+npm run build
+```
+
+There is no test runner configured yet. For this portfolio, linting and production build verification are currently the main quality gates.
